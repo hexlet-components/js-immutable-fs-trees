@@ -1,0 +1,3 @@
+[libs]
+[ignore]
+.*/node_modules/documentation/.*

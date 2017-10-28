@@ -1,0 +1,44 @@
+{
+  "name": "hexlet-trees",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "documentation": "documentation",
+    "flow-typed": "flow-typed",
+    "test": "jest --colors",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "eslint": "eslint",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlet-components/js-immutable-trees.git"
+  },
+  "author": "Kirill Mokevnin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexlet-components/js-immutable-trees/issues"
+  },
+  "homepage": "https://github.com/hexlet-components/js-immutable-trees#readme",
+  "dependencies": {
+    "babel-preset-env": "*",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*",
+    "source-map-support": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-jest": "*",
+    "documentation": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "flow-bin": "0.57.3",
+    "flow-typed": "*",
+    "jest": "^21"
+  }
+}
