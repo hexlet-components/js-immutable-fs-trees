@@ -16,6 +16,9 @@ type Directory = BaseNode & {
 
 type Node = File | Directory;
 
+/**
+ * Make directory node
+ */
 export const mkdir = (name: string, children: Array<Node> = [], meta: Object = {}): Node => ({
   name,
   children,
@@ -23,12 +26,18 @@ export const mkdir = (name: string, children: Array<Node> = [], meta: Object = {
   type: 'directory',
 });
 
+/**
+ * Make file node
+ */
 export const mkfile = (name: string, meta: Object = {}): Node => ({
   name,
   meta,
   type: 'file',
 });
 
+/**
+ * Map tree
+ */
 export const map = (f: Node => any, node: Node) => {
   const updatedNode = f(node);
 
@@ -36,6 +45,9 @@ export const map = (f: Node => any, node: Node) => {
     { ...updatedNode, children: (node.children || []).map(n => map(f, n)) } : updatedNode;
 };
 
+/**
+ * Filter tree
+ */
 export const reduce = <T>(f: (Node, T) => T, node: Node, acc: T): T => {
   const newAcc = f(node, acc);
 
@@ -45,6 +57,9 @@ export const reduce = <T>(f: (Node, T) => T, node: Node, acc: T): T => {
   return (node.children || []).reduce((iAcc, n) => reduce(f, n, iAcc), newAcc);
 };
 
+/**
+ * Filter tree
+ */
 export const filter = (f: Node => boolean, node: Node) => {
   if (!f(node)) {
     return null;
