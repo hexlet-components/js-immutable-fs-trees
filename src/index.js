@@ -48,8 +48,8 @@ export const map = (f: Node => any, node: Node) => {
 /**
  * Filter tree
  */
-export const reduce = <T>(f: (Node, T) => T, node: Node, acc: T): T => {
-  const newAcc = f(node, acc);
+export const reduce = <T>(f: (T, Node) => T, node: Node, acc: T): T => {
+  const newAcc = f(acc, node);
 
   if (node.type === 'file') {
     return newAcc;
