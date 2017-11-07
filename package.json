@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hexlet-components/js-immutable-trees.git"
+    "url": "git+https://github.com/hexlet-components/js-immutable-fs-trees.git"
   },
   "author": "Kirill Mokevnin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hexlet-components/js-immutable-trees/issues"
+    "url": "https://github.com/hexlet-components/js-immutable-fs-trees/issues"
   },
-  "homepage": "https://github.com/hexlet-components/js-immutable-trees#readme",
+  "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "dependencies": {
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
