@@ -24,21 +24,22 @@
   "dependencies": {
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
-    "babel-preset-stage-0": "*",
-    "source-map-support": "*"
+    "babel-preset-stage-0": "*"
   },
   "devDependencies": {
     "babel-cli": "*",
-    "babel-core": "*",
-    "babel-eslint": "*",
-    "babel-jest": "*",
-    "documentation": "*",
-    "eslint": "*",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "documentation": "^6.3.2",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "*",
-    "eslint-plugin-flowtype": "*",
-    "eslint-plugin-import": "*",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
     "flow-bin": "0.57.3",
-    "flow-typed": "*",
-    "jest": "^21"
+    "flow-typed": "^2.4.0",
+    "jest": "^21",
+    "jest-cli": "^22.4.3"
   }
 }

@@ -1,7 +1,5 @@
 // @flow
 
-import 'source-map-support/register';
-
 type BaseNode = { name: string, meta: {} };
 type File = BaseNode & {
   type: 'file'
