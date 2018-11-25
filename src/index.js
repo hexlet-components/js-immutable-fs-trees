@@ -44,7 +44,7 @@ export const map = (f: Node => any, node: Node) => {
 };
 
 /**
- * Filter tree
+ * Reduce tree
  */
 export const reduce = <T>(f: (T, Node) => T, node: Node, acc: T): T => {
   const newAcc = f(acc, node);
