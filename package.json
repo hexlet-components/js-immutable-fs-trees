@@ -1,6 +1,6 @@
 {
-  "name": "hexlet-immutable-fs-trees",
-  "version": "0.3.1",
+  "name": "@hexlet/immutable-fs-trees",
+  "version": "0.3.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {

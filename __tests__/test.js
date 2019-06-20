@@ -110,7 +110,12 @@ test('filter', () => {
       {
         children: [
           {
-            children: [{ children: [], meta: {}, name: 'conf.d', type: 'directory' }],
+            children: [{
+              children: [],
+              meta: {},
+              name: 'conf.d',
+              type: 'directory',
+            }],
             meta: {},
             name: 'nginx',
             type: 'directory',
