@@ -1,6 +1,6 @@
 // @flow
 
-import { mkdir, mkfile, map, reduce, filter } from '../src';
+import { mkdir, mkfile, isFile, isDirectory, map, reduce, filter } from '../src';
 
 test('build', () => {
   const tree = mkdir('/', [mkdir('etc'), mkdir('usr'), mkfile('robots.txt')]);
@@ -29,6 +29,16 @@ test('build', () => {
     name: '/',
     type: 'directory',
   });
+});
+
+test('isFile', () => {
+  const file = mkfile('config.json');
+  expect(file).toBeTruthy();
+});
+
+test('isDirectory', () => {
+  const directory = mkdir('/');
+  expect(directory).toBeTruthy();
 });
 
 test('reduce', () => {
