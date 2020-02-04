@@ -1,11 +1,10 @@
 {
   "name": "@hexlet/immutable-fs-trees",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "documentation": "documentation",
-    "flow-typed": "flow-typed",
     "test": "jest --colors",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "eslint": "eslint",
@@ -21,25 +20,18 @@
     "url": "https://github.com/hexlet-components/js-immutable-fs-trees/issues"
   },
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
-  "dependencies": {
-    "babel-preset-env": "*",
-    "babel-preset-flow": "*",
-    "babel-preset-stage-0": "*"
-  },
   "devDependencies": {
-    "babel-cli": "*",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
-    "babel-jest": "^22.4.3",
-    "documentation": "^6.3.2",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "*",
-    "eslint-plugin-flowtype": "^2.46.3",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jest": "^21.15.1",
-    "flow-bin": "0.57.3",
-    "flow-typed": "^2.4.0",
-    "jest": "^21",
-    "jest-cli": "^22.4.3"
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.1.1",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "documentation": "^9.1.1"
   }
 }

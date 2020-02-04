@@ -1,6 +1,12 @@
-// @flow
-
-import { mkdir, mkfile, isFile, isDirectory, map, reduce, filter } from '../src';
+import {
+  mkdir,
+  mkfile,
+  isFile,
+  isDirectory,
+  map,
+  reduce,
+  filter,
+} from '../src';
 
 test('build', () => {
   const tree = mkdir('/', [mkdir('etc'), mkdir('usr'), mkfile('robots.txt')]);
@@ -32,13 +38,15 @@ test('build', () => {
 });
 
 test('isFile', () => {
-  const file = mkfile('config.json');
-  expect(file).toBeTruthy();
+  const node = mkfile('config.json');
+  expect(isFile(node)).toBeTruthy();
+  expect(isDirectory(node)).toBeFalsy();
 });
 
 test('isDirectory', () => {
-  const directory = mkdir('/');
-  expect(directory).toBeTruthy();
+  const node = mkdir('/');
+  expect(isDirectory(node)).toBeTruthy();
+  expect(isFile(node)).toBeFalsy();
 });
 
 test('reduce', () => {
@@ -51,7 +59,7 @@ test('reduce', () => {
     ]),
     mkfile('hOsts'),
   ]);
-  const actual = reduce(acc => acc + 1, tree, 0);
+  const actual = reduce((acc) => acc + 1, tree, 0);
   expect(actual).toEqual(6);
 
   const actual2 = reduce((acc, n) => (n.type === 'file' ? acc + 1 : acc), tree, 0);
@@ -71,7 +79,7 @@ test('map', () => {
     ]),
     mkfile('hOsts'),
   ]);
-  const actual = map(n => ({ ...n, name: n.name.toUpperCase() }), tree);
+  const actual = map((n) => ({ ...n, name: n.name.toUpperCase() }), tree);
 
   const expected = {
     children: [
@@ -113,7 +121,7 @@ test('filter', () => {
     ]),
     mkfile('hosts'),
   ]);
-  const actual = filter(n => n.type === 'directory', tree);
+  const actual = filter((n) => n.type === 'directory', tree);
 
   const expected = {
     children: [
