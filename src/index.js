@@ -53,6 +53,30 @@ export const mkdir = (name, children = [], meta = {}) => ({
 });
 
 /**
+ * Return children
+ * @example
+ * getChildren(mkdir('etc')); // []
+ * getChildren(mkdir('etc', [mkfile('name')])); // [<file>]
+ */
+export const getChildren = (directory) => directory.children;
+
+/**
+ * Return meta
+ * @example
+ * getMeta(mkfile('etc')); // {}
+ * getMeta(mkfile('etc', { owner: 'root' })); // { owne: 'root' }
+ */
+export const getMeta = (node) => node.meta;
+
+/**
+ * Return name
+ * @example
+ * getName(mkfile('etc')); // etc
+ * getName(mkdir('/')); // /
+ */
+export const getName = (node) => node.name;
+
+/**
  * Check is node a file
  * @example
  * isFile(mkfile('config')); // true
