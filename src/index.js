@@ -64,7 +64,7 @@ export const getChildren = (directory) => directory.children;
  * Return meta
  * @example
  * getMeta(mkfile('etc')); // {}
- * getMeta(mkfile('etc', { owner: 'root' })); // { owne: 'root' }
+ * getMeta(mkfile('etc', { owner: 'root' })); // { owner: 'root' }
  */
 export const getMeta = (node) => node.meta;
 
