@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/immutable-fs-trees",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -22,16 +22,16 @@
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.3.0",
-    "eslint": "^6.8.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.1.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.8.2",
-    "jest": "^25.3.0",
-    "jest-cli": "^25.3.0",
-    "documentation": "^12.3.0"
+    "eslint-plugin-jest": "^23.13.1",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
+    "documentation": "^13.0.0"
   }
 }
