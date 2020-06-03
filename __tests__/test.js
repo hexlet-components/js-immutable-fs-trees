@@ -62,10 +62,10 @@ test('reduce', () => {
   const actual = reduce((acc) => acc + 1, tree, 0);
   expect(actual).toEqual(6);
 
-  const actual2 = reduce((acc, n) => (n.type === 'file' ? acc + 1 : acc), tree, 0);
+  const actual2 = reduce((acc, n) => (isFile(n) ? acc + 1 : acc), tree, 0);
   expect(actual2).toEqual(2);
 
-  const actual3 = reduce((acc, n) => (n.type === 'directory' ? acc + 1 : acc), tree, 0);
+  const actual3 = reduce((acc, n) => (isDirectory(n) ? acc + 1 : acc), tree, 0);
   expect(actual3).toEqual(4);
 });
 
@@ -121,7 +121,7 @@ test('filter', () => {
     ]),
     mkfile('hosts'),
   ]);
-  const actual = filter((n) => n.type === 'directory', tree);
+  const actual = filter((n) => isDirectory(n), tree);
 
   const expected = {
     children: [
