@@ -1,7 +1,17 @@
 // @ts-check
 
 /**
+ * Node
+ * @typedef {Object} Node
+ * @property {string} name
+ * @property {(directory | file)} type
+ * @property {Object} meta – custom information
+ */
+
+/**
  * Make file node
+ * @param {string} name
+ * @returns Node
  * @example
  * mkfile('config.json');
  * // {
@@ -25,6 +35,9 @@ export const mkfile = (name, meta = {}) => ({
 
 /**
  * Make directory node
+ *
+ * @param {string} name
+ * @param {Object[]} children
  * @example
  * mkdir('etc');
  * // {
@@ -54,6 +67,7 @@ export const mkdir = (name, children = [], meta = {}) => ({
 
 /**
  * Return children
+ *
  * @example
  * getChildren(mkdir('etc')); // []
  * getChildren(mkdir('etc', [mkfile('name')])); // [<file>]
@@ -70,6 +84,7 @@ export const getMeta = (node) => node.meta;
 
 /**
  * Return name
+ *
  * @example
  * getName(mkfile('etc')); // etc
  * getName(mkdir('/')); // /

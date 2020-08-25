@@ -1,14 +1,11 @@
 {
   "name": "@hexlet/immutable-fs-trees",
   "version": "0.5.2",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "FileSystem Tree",
+  "type": "module",
   "scripts": {
     "documentation": "documentation",
-    "test": "jest --colors",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "eslint": "eslint",
-    "prepublishOnly": "npm run build"
+    "test": "npx -n --experimental-vm-modules jest --colors"
   },
   "repository": {
     "type": "git",
@@ -21,17 +18,12 @@
   },
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
-    "eslint": "^7.1.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.13.1",
-    "jest": "^26.0.1",
-    "jest-cli": "^26.0.1",
-    "documentation": "^13.0.0"
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2",
+    "documentation": "^13.0.2"
   }
 }

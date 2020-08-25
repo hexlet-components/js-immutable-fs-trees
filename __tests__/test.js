@@ -1,3 +1,5 @@
+// @ts-check
+
 import {
   mkdir,
   mkfile,
@@ -6,7 +8,7 @@ import {
   map,
   reduce,
   filter,
-} from '../src';
+} from '../index.js';
 
 test('build', () => {
   const tree = mkdir('/', [mkdir('etc'), mkdir('usr'), mkfile('robots.txt')]);
