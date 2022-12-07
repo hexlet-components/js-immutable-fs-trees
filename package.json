@@ -24,6 +24,6 @@
     "eslint-plugin-jest": "^26.2.2",
     "jest": "^28.1.0",
     "jest-cli": "^28.1.0",
-    "documentation": "^13.2.5"
+    "documentation": "^14.0.0"
   }
 }
