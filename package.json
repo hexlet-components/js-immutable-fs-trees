@@ -2,6 +2,7 @@
   "name": "@hexlet/immutable-fs-trees",
   "version": "0.7.2",
   "description": "FileSystem Tree",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "documentation": "documentation",
