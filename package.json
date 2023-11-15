@@ -3,6 +3,7 @@
   "version": "0.7.2",
   "description": "FileSystem Tree",
   "type": "module",
+  "exports": "./index.js",
   "scripts": {
     "documentation": "documentation",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
