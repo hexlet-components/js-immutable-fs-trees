@@ -1,13 +1,13 @@
 // @ts-check
 
 import {
+  filter,
+  isDirectory,
+  isFile,
+  map,
   mkdir,
   mkfile,
-  isFile,
-  isDirectory,
-  map,
   reduce,
-  filter,
 } from '../index.js';
 
 test('build', () => {
@@ -53,12 +53,7 @@ test('isDirectory', () => {
 
 test('reduce', () => {
   const tree = mkdir('/', [
-    mkdir('eTc', [
-      mkdir('NgiNx'),
-      mkdir('CONSUL', [
-        mkfile('config.json'),
-      ]),
-    ]),
+    mkdir('eTc', [mkdir('NgiNx'), mkdir('CONSUL', [mkfile('config.json')])]),
     mkfile('hOsts'),
   ]);
   const actual = reduce((acc) => acc + 1, tree, 0);
@@ -73,12 +68,7 @@ test('reduce', () => {
 
 test('map', () => {
   const tree = mkdir('/', [
-    mkdir('eTc', [
-      mkdir('NgiNx'),
-      mkdir('CONSUL', [
-        mkfile('config.json'),
-      ]),
-    ]),
+    mkdir('eTc', [mkdir('NgiNx'), mkdir('CONSUL', [mkfile('config.json')])]),
     mkfile('hOsts'),
   ]);
   const actual = map((n) => ({ ...n, name: n.name.toUpperCase() }), tree);
@@ -88,7 +78,10 @@ test('map', () => {
       {
         children: [
           {
-            children: [], meta: {}, name: 'NGINX', type: 'directory',
+            children: [],
+            meta: {},
+            name: 'NGINX',
+            type: 'directory',
           },
           {
             children: [{ meta: {}, name: 'CONFIG.JSON', type: 'file' }],
@@ -114,12 +107,8 @@ test('map', () => {
 test('filter', () => {
   const tree = mkdir('/', [
     mkdir('etc', [
-      mkdir('nginx', [
-        mkdir('conf.d'),
-      ]),
-      mkdir('consul', [
-        mkfile('config.json'),
-      ]),
+      mkdir('nginx', [mkdir('conf.d')]),
+      mkdir('consul', [mkfile('config.json')]),
     ]),
     mkfile('hosts'),
   ]);
@@ -130,12 +119,14 @@ test('filter', () => {
       {
         children: [
           {
-            children: [{
-              children: [],
-              meta: {},
-              name: 'conf.d',
-              type: 'directory',
-            }],
+            children: [
+              {
+                children: [],
+                meta: {},
+                name: 'conf.d',
+                type: 'directory',
+              },
+            ],
             meta: {},
             name: 'nginx',
             type: 'directory',
