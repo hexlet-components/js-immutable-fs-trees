@@ -183,6 +183,11 @@ export const filter = (callbackFn, tree) => {
   }
 
   return isDirectory(tree)
-    ? { ...tree, children: tree.children.map((n) => filter(callbackFn, n)).filter((v) => v) }
+    ? {
+        ...tree,
+        children: tree.children
+          .map((n) => filter(callbackFn, n))
+          .filter((v) => v),
+      }
     : tree;
 };

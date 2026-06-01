@@ -4,9 +4,13 @@
   "description": "FileSystem Tree",
   "type": "module",
   "exports": "./index.js",
+  "engines": {
+    "node": ">=26.0"
+  },
   "scripts": {
     "documentation": "documentation",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "vitest run",
+    "lint": "biome check ."
   },
   "repository": {
     "type": "git",
@@ -19,12 +23,8 @@
   },
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "devDependencies": {
-    "eslint": "^10.2.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^29.15.2",
-    "jest": "^30.3.0",
-    "jest-cli": "^30.3.0",
-    "documentation": "^14.0.0"
+    "@biomejs/biome": "^2.2.4",
+    "documentation": "^14.0.0",
+    "vitest": "^4.0.15"
   }
 }
