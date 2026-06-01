@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "devDependencies": {
-    "eslint": "^8.16.0",
+    "eslint": "^10.2.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.2.2",
-    "jest": "^28.1.0",
-    "jest-cli": "^28.1.0",
+    "eslint-plugin-jest": "^29.15.2",
+    "jest": "^30.3.0",
+    "jest-cli": "^30.3.0",
     "documentation": "^14.0.0"
   }
 }
