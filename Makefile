@@ -1,17 +1,18 @@
 install:
-	npm install
+	pnpm install
 
 docs:
 	mkdir -p docs
-	npm run documentation -- build index.js -f md > docs/README.md
+	pnpm --silent run documentation -- build index.js -f md > docs/README.md
 
 test:
-	npm test -s
+	pnpm --silent test
 
 lint:
-	npx biome check .
+	pnpm --silent run lint
+	pnpm --silent run format:check
 
 publish:
-	npm publish --access public
+	pnpm publish --access public --no-git-checks
 
 .PHONY: test docs
