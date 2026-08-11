@@ -1,0 +1,46 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v5
+        id: release
+        with:
+          release-type: node
+
+      - uses: actions/checkout@v7
+        if: ${{ steps.release.outputs.release_created }}
+
+      - uses: pnpm/action-setup@v6
+        if: ${{ steps.release.outputs.release_created }}
+
+      - uses: actions/setup-node@v7
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: '26.x'
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: make install
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: make lint
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: make test
+        if: ${{ steps.release.outputs.release_created }}
+
+      - run: make publish
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_COM }}
