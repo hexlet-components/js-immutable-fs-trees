@@ -3,8 +3,8 @@
 /**
  * Node
  * @typedef {Object} Node
- * @property {string} name
- * @property {(directory | file)} type
+ * @property {string} name – node name inside its parent directory
+ * @property {(directory | file)} type – whether the node is a directory or a file
  * @property {Object} meta – custom information
  */
 
