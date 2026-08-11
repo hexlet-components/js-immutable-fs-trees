@@ -30,7 +30,7 @@
 export const mkfile = (name, meta = {}) => ({
   name,
   meta,
-  type: 'file',
+  type: "file",
 });
 
 /**
@@ -62,7 +62,7 @@ export const mkdir = (name, children = [], meta = {}) => ({
   name,
   children,
   meta,
-  type: 'directory',
+  type: "directory",
 });
 
 /**
@@ -97,7 +97,7 @@ export const getName = (node) => node.name;
  * isFile(mkfile('config')); // true
  * isFile(mkdir('etc')); // false
  */
-export const isFile = (node) => node.type === 'file';
+export const isFile = (node) => node.type === "file";
 
 /**
  * Check is node a directory
@@ -105,7 +105,7 @@ export const isFile = (node) => node.type === 'file';
  * isDirectory(mkdir('etc')); // true
  * isDirectory(mkfile('config')); // false
  */
-export const isDirectory = (node) => node.type === 'directory';
+export const isDirectory = (node) => node.type === "directory";
 
 /**
  * Map tree
@@ -185,9 +185,7 @@ export const filter = (callbackFn, tree) => {
   return isDirectory(tree)
     ? {
         ...tree,
-        children: tree.children
-          .map((n) => filter(callbackFn, n))
-          .filter((v) => v),
+        children: tree.children.map((n) => filter(callbackFn, n)).filter((v) => v),
       }
     : tree;
 };
