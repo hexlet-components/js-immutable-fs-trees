@@ -2,6 +2,16 @@
 
 [![github action status](https://github.com/hexlet-components/js-immutable-fs-trees/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/js-immutable-fs-trees/actions)
 
+## Зачем это нужно
+
+Дерево файловой системы из **неизменяемых** узлов: любая правка возвращает новое
+дерево, старое остаётся прежним.
+
+Нужна курсам, где сравнивают этот подход с изменяемыми деревьями из
+[@hexlet/trees](https://github.com/hexlet-components/js-trees). На таком
+сравнении видно, что неизменяемость даёт (безопасное разделение данных) и чего
+стоит (пересборка пути до корня на каждое изменение).
+
 ## Install
 
 ```sh
