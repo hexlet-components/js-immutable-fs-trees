@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/hexlet-components/js-immutable-fs-trees#readme",
   "devDependencies": {
-    "documentation": "^14.0.0",
-    "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
-    "vitest": "^4.0.15"
+    "documentation": "^14.0.3",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "vitest": "^4.1.11"
   },
-  "packageManager": "pnpm@11.20.0"
+  "packageManager": "pnpm@11.24.0"
 }
