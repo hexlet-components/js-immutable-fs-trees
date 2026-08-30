@@ -6,38 +6,38 @@
 
 ### Table of Contents
 
--   [Node][1]
-    -   [Properties][2]
--   [mkfile][3]
-    -   [Parameters][4]
-    -   [Examples][5]
--   [mkdir][6]
-    -   [Parameters][7]
-    -   [Examples][8]
--   [getChildren][9]
-    -   [Parameters][10]
-    -   [Examples][11]
--   [getMeta][12]
-    -   [Parameters][13]
-    -   [Examples][14]
--   [getName][15]
-    -   [Parameters][16]
-    -   [Examples][17]
--   [isFile][18]
-    -   [Parameters][19]
-    -   [Examples][20]
--   [isDirectory][21]
-    -   [Parameters][22]
-    -   [Examples][23]
--   [map][24]
-    -   [Parameters][25]
-    -   [Examples][26]
--   [reduce][27]
-    -   [Parameters][28]
-    -   [Examples][29]
--   [filter][30]
-    -   [Parameters][31]
-    -   [Examples][32]
+- [Node][1]
+    - [Properties][2]
+- [mkfile][3]
+    - [Parameters][4]
+    - [Examples][5]
+- [mkdir][6]
+    - [Parameters][7]
+    - [Examples][8]
+- [getChildren][9]
+    - [Parameters][10]
+    - [Examples][11]
+- [getMeta][12]
+    - [Parameters][13]
+    - [Examples][14]
+- [getName][15]
+    - [Parameters][16]
+    - [Examples][17]
+- [isFile][18]
+    - [Parameters][19]
+    - [Examples][20]
+- [isDirectory][21]
+    - [Parameters][22]
+    - [Examples][23]
+- [map][24]
+    - [Parameters][25]
+    - [Examples][26]
+- [reduce][27]
+    - [Parameters][28]
+    - [Examples][29]
+- [filter][30]
+    - [Parameters][31]
+    - [Examples][32]
 
 ## Node
 
@@ -47,9 +47,9 @@ Type: [Object][33]
 
 ### Properties
 
--   `name` **[string][34]** 
--   `type` **(directory | file)** 
--   `meta` **[Object][33]** – custom information
+- `name` **[string][34]**
+- `type` **(directory | file)**
+- `meta` **[Object][33]** – custom information
 
 ## mkfile
 
@@ -57,8 +57,8 @@ Make file node
 
 ### Parameters
 
--   `name` **[string][34]** 
--   `meta`   (optional, default `{}`)
+- `name` **[string][34]**
+- `meta` (optional, default `{}`)
 
 ### Examples
 
@@ -86,9 +86,9 @@ Make directory node
 
 ### Parameters
 
--   `name` **[string][34]** 
--   `children` **[Array][35]&lt;[Object][33]>**  (optional, default `[]`)
--   `meta`   (optional, default `{}`)
+- `name` **[string][34]**
+- `children` **[Array][35]&lt;[Object][33]>** (optional, default `[]`)
+- `meta` (optional, default `{}`)
 
 ### Examples
 
@@ -119,7 +119,7 @@ Return children
 
 ### Parameters
 
--   `directory`  
+- `directory`  
 
 ### Examples
 
@@ -134,7 +134,7 @@ Return meta
 
 ### Parameters
 
--   `node`  
+- `node`  
 
 ### Examples
 
@@ -149,7 +149,7 @@ Return name
 
 ### Parameters
 
--   `node`  
+- `node`  
 
 ### Examples
 
@@ -164,7 +164,7 @@ Check is node a file
 
 ### Parameters
 
--   `node`  
+- `node`  
 
 ### Examples
 
@@ -179,7 +179,7 @@ Check is node a directory
 
 ### Parameters
 
--   `node`  
+- `node`  
 
 ### Examples
 
@@ -194,8 +194,8 @@ Map tree
 
 ### Parameters
 
--   `callbackFn`  
--   `tree`  
+- `callbackFn`  
+- `tree`  
 
 ### Examples
 
@@ -226,9 +226,9 @@ Reduce tree
 
 ### Parameters
 
--   `callbackFn`  
--   `tree`  
--   `acc`  
+- `callbackFn`  
+- `tree`  
+- `acc`  
 
 ### Examples
 
@@ -248,8 +248,8 @@ Filter tree
 
 ### Parameters
 
--   `callbackFn`  
--   `tree`  
+- `callbackFn`  
+- `tree`  
 
 ### Examples
 
