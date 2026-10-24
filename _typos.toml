@@ -1,0 +1,3 @@
+[files]
+# Сгенерировано из комментариев кода командой make docs.
+extend-exclude = ["docs/README.md"]

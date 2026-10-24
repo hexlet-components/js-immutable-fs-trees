@@ -3,3 +3,4 @@ dist
 *.log
 flow-typed
 .tern-port
+.lycheecache
